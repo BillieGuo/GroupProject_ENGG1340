@@ -5,9 +5,13 @@ Bao Guo(3035952458), Yucheng Guo(3035952707).
 You are going to play a role from the famous animation "名探偵コナン"（Case closed）. Conan(柯南), his friends and Hiroshi Agasa（阿笠博士） were going to camping. They accitentally found an old castle on there way finding a night place. However there are more secrets and danger hiding in that castle...
 ### Game rules
 Walk and Explore in the game. Finding clues to sovle the puzzle. You can talk to npcs to gain information. Discover the treasure left by the original owner of the castle.
+
 using "n,s,w,e" commands to move in different scenes.
+
 using "i" to inspect item
+
 using "c" to communicate with npc
+
 ...
 ### Game content
 1: There will be 2-4 maps, which are adapted from the animation, for the whole game. And for each map, there will be several sences respectively. Each map will be          store in seperate file and arrays are used for storing details of sences in map (i.e. what we have in the sence, and how many sences there are.)
