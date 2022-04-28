@@ -6,6 +6,9 @@
 #include <iostream>
 #include <fstream>
 #include <vector>
+#include "Scene1to5.h"
+#include "Scene6to10.h"
+#include "Scene11to14.h"
 using namespace std;
 
 struct info{
@@ -96,10 +99,73 @@ int main(){
   for (int i = 0; i != 5; i++){
     cout << "..." << endl;
   }
-  //backgound info
 
-//part 1
-//s1
+
+  switch(status->scene){
+    case 0:
+      break;
+    case 1:
+      Scene_1();
+      status->scene = 2;
+      break;
+    case 2:
+      Scene_2();
+      status->scene = 3;
+      break;
+    case 3:
+      Scene_3(cho);
+      if (cho == 1){status->add_clue("ChessBoard");}
+      status->scene = 4;
+      break;
+    case 4:
+      Scene_4();
+      if (cho != 1){status->add_clue("ChessBoard");}
+      status->scene = 5;
+      break;
+    case 5:
+      Scene_5(count);
+      status->scene = 6;
+      break;
+    case 6:
+      Scene_6();
+      status->scene = 7;
+      break;
+    case 7:
+      Scene_7(cho);
+      status->scene = 8;
+      break;
+    case 8:
+      Scene_8();
+      status->scene = 9;
+      break;
+    case 9:
+      Scene_9();
+      status->scene = 10;
+      break;
+    case 10:
+      Scene_10();
+      status->scene = 11;
+      break;
+    case 11:
+      Scene_11();
+      status->scene = 12;
+      break;
+    case 12:
+      Scene_12();
+      status->scene = 13;
+      break;
+    case 13:
+      Scene_13();
+      status->scene = 14;
+      break;
+    case 14:
+      Scene_14();
+      status->scene = 0;
+      break;
+  }
+
+
+{//s1
   cout << "Scene 1" << endl;
   cout << "Conan and his friends went out to camp with Dr Agasa, ";
   cout << "but had to return because Dr Agasa forgot to bring his tent. " << endl;
@@ -197,12 +263,12 @@ int main(){
   }
   else {
     cout << "Back in the hall, Anita tells the Doctor that Conan is probably been killed." << endl;
-    cour << "(At this time, the mysterious person overhead in the shadows and later stalked Dr Agasa)" << endl;
+    cout << "(At this time, the mysterious person overhead in the shadows and later stalked Dr Agasa)" << endl;
     status->scene = 8;
   }
   //s8
   cout << "Dr Agasa is attracted by the noise when he is about to make a phone call in the hallway.";
-  cout << "Then he walks to the source to find Conan's hat, which still has blood on it."; << endl;
+  cout << "Then he walks to the source to find Conan's hat, which still has blood on it." << endl;
   cout << "At this time, a secret door on the wall next to him opened. Driven by curiosity ,Dr Agasa walked in,";
   cout << "and was knocked into unconscious from behind by the mysterious person before the secret door closed." << endl;
   cout << "Later Anita finds that the doctor is also disappeared. When Anita tried to call the police herself, the Lord comes over.";
@@ -212,7 +278,7 @@ int main(){
   cout << "Dr Agasa did returned to the room, Anita thoughts that the doctor was killed, so she conducted an investigation at night,";
   cout << "and the other partners secretly follow her and are found by Anita." << endl;
   cout << "As a matter of fact, they investigat together and return to the room where Conan disappeared during the day.";
-  cout << "Anita opens the secret door with the same way Conan did, and after they go in it, they find bloodstain while they exploring downwards."
+  cout << "Anita opens the secret door with the same way Conan did, and after they go in it, they find bloodstain while they exploring downwards.";
   cout << "On a staircase, Mitch finds a series of inscription from long time ago, which says,";
   cout << "---\"That person has now taken my place and wants to rob the trea of the castle.\"---";
   cout << "The last word was not written, as if the person wanted to write the treasure." << endl;
@@ -235,7 +301,7 @@ int main(){
   cout << "When Amy and Anita come out, Mitch have already disappeared. So Anita decided to enter the tower first to find Mitch,";
   cout << "and tells Amy to run away if she does not come out within three hundred seconds." << endl;
   cout << "Amy is eager to find her friends, so she does not run away after counting to 300 seconds, and also entered the tower." << endl;
-  status->sence = 11;
+  status->scene = 11;
   //s11
   cout << "Inside the tower, Amy mistakenly enters a toilet and locks the door.";
   cout << "At this time, there was a frequent knock on the door,";
@@ -284,8 +350,7 @@ int main(){
   cout << "and she is greeted by the castle's best view and the most beautiful viewing position." << endl;
   cout << "While Nishikawa is still finding the treasure, Conan prompts Nishikawa to see a message on the door:" << endl;
   cout << "-----\"I would like to give this castle and this scene to the first person who find it.\"-----" << endl;
-  cout << "Nishikawa is distraught and unable to accept the facts, and an hour later the police arrest the woman who has truly become an eldest lady." << endl;
-  status->scene = 0;
+  cout << "Nishikawa is distraught and unable to accept the facts, and an hour later the police arrest the woman who has truly become an eldest lady." << endl;}
   //end
   cout << "END..." << endl;
   cout << "Thanks for playing!" << endl;
