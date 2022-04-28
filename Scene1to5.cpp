@@ -7,7 +7,7 @@ void Scene_1(){
   cout << "Scene 1" << endl;
   cout << "Conan and his friends went out to camp with Dr Agasa, ";
   cout << "but had to return because Dr Agasa forgot to bring his tent. " << endl;
-  cout << "On the way back, they found a blue castle.";
+  cout << "On the way back, they found a blue castle." << endl;
 }
 void Scene_2(){
   cout << "At the gate of the blue castle, when everyone is looking at it, ";
