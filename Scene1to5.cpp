@@ -10,6 +10,7 @@ void Scene_1(){
   cout << "On the way back, they found a blue castle." << endl;
 }
 void Scene_2(){
+  cout << "Scene 2" << endl;
   cout << "At the gate of the blue castle, when everyone is looking at it, ";
   cout << "George rushes over the gate and is caught by a gardener." << endl;
   cout << "With some explains, the gardener realizes it is a misunderstand ";
@@ -17,6 +18,7 @@ void Scene_2(){
   cout << "After he learned that Dr Agasa is a scientist, he decides to invite everyone to stay for one night." << endl;
 }
 void Scene_3(int &cho){
+  cout << "Scene 3" << endl;
   cout << "Walking into the courtyard, they are greeted by many huge Chess pieces, ";
   cout << "which were built according to the wills of the Great Lord who died fifteen years ago." << endl;
   cout << "The eldest son of the Great Lord, who died of illness six years ago, instructed the housekeeper to keep these Chess pieces up. " << endl;
@@ -37,6 +39,7 @@ void Scene_3(int &cho){
   }
 }
 void Scene_4(){
+  cout << "Scene 4" << endl;
   cout << "After entering the hall, Dr Agasa, Conan and his friends see the portraits of the Great Lord, son of the Great Lord and His Wife." << endl;
   cout << "At the time of the introduction by the housekeeper, the Eldest Lady comes in with a wheelchair and says that the Great Lord is just a intellectual with nonsense." << endl;
   cout << "Awaring of that Dr Agasa is a scientist, so she hopes that he could help unravel the Secret of the castle." << endl;
@@ -48,6 +51,7 @@ void Scene_4(){
 }
 void Scene_5(int &count){
   string paz;
+  cout << "Scene 5" << endl;
   cout << "Conan discovers that the two windows against the wall of the two adjacent rooms are too far apart, ";
   cout << "and becomes suspicious that there is space between the walls." << endl;
   cout << "After investigating the clock on the wall, he finds a broken clock which is A typical trigger of a secret room." << endl;
