@@ -33,17 +33,20 @@ void Scene_12(){
 void Escape_2(int &result){
   int count, num;
   string ans = "", guess;
+  //random seed
   srand(time(0));
   cout << "To escape from the underground passage, you need to win a game." << endl;
   cout << "You will be provided with 5 numbers, and odd numbers represent \"Left\" and even numbers represents \"right\"." << endl;
   cout << "---e.g.\n---1\n---93\n---64\n---44\n---27\n---The answer is \"LLRRL\"." << endl;
   cout << "------------------------\nNow the game starts:" << endl;
+  //generate random number
   for (int i = 0; i < 5; i++){
     num = rand() % 100 + 1;
     if ((num % 2) == 0){ans += "R";}
     else{ans += "L";}
     cout << num << endl;
   }
+  // enter a series of characters
   cin >> guess;
   if (guess != ans){
     result = 0;
@@ -80,6 +83,7 @@ void Treasure(vector<string> &clue){
   cout << "Now please help Conan to figure out the answer of the Treasure." << endl;
   cout << "Hint: Check the clues you have collected. Enter \"Clues\" to see the infomation you have collected.";
   cout << "Then enter the name for further details. Enter \"Quit\" to quit.(You cannot check again once you quit)" << endl;
+  //enter a word--Clues
   cin >> command;
   if (command == "Clues"){
     cout << "========" << endl;
@@ -89,6 +93,7 @@ void Treasure(vector<string> &clue){
     }
     cout << "========" << endl;
   }
+  //enter a word
   cin >> clue_name;
   while (clue_name != "Quit"){
     if (clue_name == "ChessBoard"){
@@ -126,8 +131,10 @@ void Treasure(vector<string> &clue){
   cout << "With the infomation you have known, try to figure out the answer of the Treasure.(5 chances)" << endl;
   while (count < 5){
     cout << "Please enter the answer(two words in CAPITAL): ";
+    //enter the first word
     cin >> temp;
     ans = temp + " ";
+    //enter the second word
     cin >> temp;
     ans += temp;
     if (ans == "EGG HEAD"){
