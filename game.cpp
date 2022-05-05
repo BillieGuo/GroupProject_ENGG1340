@@ -34,13 +34,17 @@ void load_game(info *status){
     cout << "Error in opening file!" << endl;
     exit(1);
   }
+  //read scene
   fin >> status->scene;
   string x;
+  //read clues
   while(fin >> x){
+    //pass the seperator
     if (x == "-----"){break;}
     status->add_clue(x);
     fin >> x;
   }
+  //read achievement
   while(fin >> x){
     status->add_achievement(x);
   }
@@ -55,19 +59,23 @@ void save_game(info *status){
       cout << "Error in opening file!" << endl;
       exit(1);
     }
+  //write scene
     fout << status->scene << endl;
     vector<string>::iterator i;
+  //write clues
     for (i = status->clue.begin(); i < status->clue.end(); i++){
       fout << *i << endl;
     }
+  //add seperator
     fout << "-----" << endl;
+  // write achievement
     for (i = status->achievement.begin(); i < status->achievement.end(); i++){
       fout << *i << endl;
     }
     fout.close();
 }
 
-//find file in the "Saves" directory, return false if no saved game.
+//find "save.txt" file in the directory, return false if no saved game.
 bool check_saved_game(){
   ifstream fin;
   fin.open("save.txt");
@@ -89,6 +97,7 @@ void starts(int *starts){
   cout << "---3. Quit" << endl;
 
   cout << "Pleas enter a number: ";
+  // enter the corresponding number
   cin >> *starts;
   if (*starts == 1){
     cout << "Loading..." << endl;
@@ -129,8 +138,9 @@ int main(){
   else if (*game_ini == 2){
     load_game(&(*status));
   }
-  //end
+  //terminate
   else if (*game_ini == 3){return 0;}
+  //free memory
   delete game_ini;
 
   while (status->scene != 0){
@@ -144,6 +154,7 @@ int main(){
     else {
       cout << "Do you want to save game?\n--1.Yes\n--2.No" << endl;
       cout << "Please enter a number: " ;
+      //enter coreponding number
       cin >> save;
       if (save == 1){save_game(&(*status));}
       cout << "Enter \"n\" for next scene." << endl;
@@ -277,15 +288,17 @@ int main(){
   sep();
   cout << "END..." << endl;
   cout << "Thanks for playing!" << endl;
-
+  //print out the clues found
   vector<string>:: iterator i;
   cout << "The clues you have collected: " << endl;
   for (i = status->clue.begin(); i != status->clue.end(); i++){
     cout << *i<< endl;
   }
+  //print out the achievements
   cout << "The achievements you have is/are below: " << endl;
   for (i = status->achievement.begin(); i != status->achievement.end(); i++){
     cout << *i<< endl;
   }
+  //free memory of status
   delete status;
 }
