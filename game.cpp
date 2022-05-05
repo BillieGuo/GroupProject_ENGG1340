@@ -156,6 +156,13 @@ int main(){
       cout << "Please enter a number: " ;
       //enter coreponding number
       cin >> save;
+      cout << "Do you want to quit?\n--1.Yes\n--2.No" << endl;
+      cout << "Please enter a number: " ;
+      cin >> quit;
+      if (quit == 1){
+        cout << "Game terminated." << endl;
+        exit(0);
+      }
       if (save == 1){save_game(&(*status));}
       cout << "Enter \"n\" for next scene." << endl;
       cin >> n;
