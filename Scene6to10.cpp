@@ -24,6 +24,7 @@ void Scene_7(int &cho){
   cout << "Now there is a choice:\n---Should Anita tells her concerns to Dr Agasa?" << endl;
   cout << "---1.Yes\n---2.No" << endl;
   cout << "Your choice is: ";
+  //enter a number
   cin >> cho;
 }
 void Scene_8(int &cho){
@@ -38,6 +39,7 @@ void Scene_8(int &cho){
   cout << "Now there is a choice:\n---Should Anita investigates herself or waits until the police come in tomorrow morning?" << endl;
   cout << "---1.Go investigating\n---2.Stay in the room" << endl;
   cout << "Your choice is: ";
+  //enter a number
   cin >> cho;
 }
 void Scene_9(){
@@ -71,6 +73,7 @@ void Scene_10(int &cho){
   cout << "Now there is a choice:\n---Should Amy goes in the tower or listen to Anita and run away?" << endl;
   cout << "---1. Enter the tower\n---2. Run away" << endl;
   cout << "Your choice is: ";
+  //enter a number
   cin >> cho;
 }
 
@@ -84,6 +87,7 @@ void Escape_1(int &result){
   cout << "You need to guess a number from 0 to 9, and you have 4 chances." << endl;
   while (count < 3){
     cout << "Please enter a number: ";
+    // enter a number
     cin >> guess;
     if (guess > num){
       cout << guess << " is larger, you need to guess a smaller one." << endl;
