@@ -32,6 +32,7 @@ void Scene_3(int &cho){
   cout << "1. Go around the courtyard" << endl;
   cout << "2. Enter the castle" << endl;
   cout << "Your choice is: ";
+  //enter a number
   cin >> cho;
   if (cho == 1){
     cout << "You are amazed by the huge Chess pieces, and decide to record them." << endl;
@@ -61,6 +62,7 @@ void Scene_5(int &count){
   cout << "Hint: what is the motion of the hands of clock?" << endl;
   while (count < 3){
     cout << "Your answer is: ";
+    //enter a word
     cin >> paz;
     count++;
     if (paz == "rotate" || paz == "rotation"){
