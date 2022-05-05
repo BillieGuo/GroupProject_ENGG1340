@@ -11,3 +11,8 @@ game.o: game.cpp Scene1to5.h Scene6to10.h Scene11to14.h Scene15to17.h
 game: game.o Scene1to5.o Scene6to10.o Scene11to14.o Scene15to17.o
 	g++ game.o Scene1to5.o Scene6to10.o Scene11to14.o Scene15to17.o -o game
 
+
+clean:
+	rm -f game *.o
+
+.PHONY: clean

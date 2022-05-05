@@ -94,6 +94,16 @@ void Treasure(vector<string> &clue){
     if (clue_name == "ChessBoard"){
       cout << "-----" << endl;
       cout << "Chess Board(pattern):\n";
+      cout << "8 |-|-|-|O|-|-|-|-|" << endl;
+      cout << "7 |O|-|X|X|X|X|-|-|" << endl;
+      cout << "6 |-|X|-|-|O|-|X|-|" << endl;
+      cout << "5 |-|X|-|-|-|-|X|O|" << endl;
+      cout << "4 |-|X|-|X|-|-|X|-|" << endl;
+      cout << "3 |-|-|X|X|-|X|O|-|" << endl;
+      cout << "2 |-|X|X|X|-|-|O|-|" << endl;
+      cout << "1 |-|-|-|-|O|-|-|-|" << endl;
+      cout << "   A B C D E F G H " << endl;
+      cout << "\"X\" for Balck Chess, \"O\" for White chess, \"-\" for empty" << endl;
       cout << "-----" << endl;
     }
     else if(clue_name == "Passport"){

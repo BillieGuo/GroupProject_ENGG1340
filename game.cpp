@@ -278,15 +278,14 @@ int main(){
   cout << "END..." << endl;
   cout << "Thanks for playing!" << endl;
 
-  //delete status;
-//testing file I/O
-  cout << status->scene <<endl;
   vector<string>:: iterator i;
+  cout << "The clues you have collected: " << endl;
   for (i = status->clue.begin(); i != status->clue.end(); i++){
     cout << *i<< endl;
   }
-  cout << "The achievement you have is/are below: " << endl;
+  cout << "The achievements you have is/are below: " << endl;
   for (i = status->achievement.begin(); i != status->achievement.end(); i++){
     cout << *i<< endl;
   }
+  delete status;
 }
