@@ -85,7 +85,7 @@ void Escape_1(int &result){
   srand(time(0));
   num = rand() % 10;
   cout << "You need to guess a number from 0 to 9, and you have 4 chances." << endl;
-  while (count < 3){
+  while (count < 4){
     cout << "Please enter a number: ";
     // enter a number
     cin >> guess;
