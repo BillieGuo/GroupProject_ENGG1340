@@ -125,7 +125,7 @@ void sep(){
 int main(){
   int *game_ini = new int;
   info *status = new info;
-  int cho, count = 0, save;
+  int cho, count = 0, save, quit;
   char n;
   string paz;
 
