@@ -49,8 +49,18 @@ All you need to do is to go through the plot and find the implicit informatino t
   5. Use command "make clean" if you want to clean all *.o files
   
 ### Sample input/output file
-  save.txt :(e.g. 2              -> Scene
-                  ChessBoard     -> Clue
-                  -----          -> seperator
-                  ChessBoard     -> Achievement
-                  Conan'sGlasses -> Achievement
+    save.txt
+    (cat save.txt (example))
+    ===============
+    2
+    ChessBoard
+    -----
+    ChessBoard
+    Passport
+    ===============
+    
+    2 is scene
+    ChessBoard above "-----" is clue
+    below "-----" are achievements
+    
+    
